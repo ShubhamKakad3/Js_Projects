@@ -1,0 +1,60 @@
+html {
+    margin: 0;
+  }
+  
+  span {
+    display: block;
+  }
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+  }
+  
+  #grey {
+    background: grey;
+    border-radius: 50px;
+    border: 2px solid rgb(81, 224, 53);
+  }
+  
+  #white {
+    background: white;
+    border-radius: 50px;
+    border: 2px solid rgb(81, 224, 53);
+  
+  }
+  #blue {
+    background: blue;
+    border-radius: 50px;
+    border: 2px solid rgb(81, 224, 53);
+  
+  }
+  #yellow {
+    background: yellow;
+    border-radius: 50px;
+    border: 2px solid rgb(81, 224, 53);
+  
+  }
+  #green {
+    background: rgb(52, 165, 18);
+    border-radius: 50px;
+    border: 2px solid rgb(81, 224, 53);
+  
+  
+  }
+  #red {
+    background: rgb(228, 12, 59);
+    border-radius: 50px;
+    border: 2px solid rgb(81, 224, 53);
+  
+  
+  }
+  
+  

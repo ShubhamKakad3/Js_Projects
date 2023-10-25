@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+
+    <!-- styles -->
+  <style>
+    main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+#value {
+  font-size: 6rem;
+  font-weight: bold;
+}
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  margin: 0.5rem;
+}
+.btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+  </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Increase And Decrease</h1>
+        <span id="value">0</span>
+        <div class="button-container">
+          <button class="btn decrease">decrease</button>
+          <button class="btn reset">reset</button>
+          <button class="btn increase">increase</button>
+        </div>
+      </div>
+    </main>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>

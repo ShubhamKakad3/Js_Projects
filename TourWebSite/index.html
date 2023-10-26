@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+  
+<style>
+ body{
+  background: url(one.jpeg) no-repeat center center/cover;
+}
+.nav {
+  background: var(--clr-white);
+  padding: 1rem 1.5rem;
+  color: rgba(2, 132, 245, 0.995);
+}
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.fixed-nav .links a {
+  color: var(--clr-grey-1);
+}
+.fixed-nav .links a:hover {
+  color: var(--clr-secondary);
+}
+/* .fixed-nav .links-container {
+  height: auto !important;
+} */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.nav-toggle:hover {
+  color: var(--clr-secondary);
+}
+.logo {
+  height: 50px;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.show-links {
+  height: 200px;
+}
+.links a {
+  background: var(--clr-white);
+  color: var(--clr-grey-5);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  transition: var(--transition);
+  font-weight: bold;
+  padding: 0.75rem 0;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.links a:hover {
+  color: var(--clr-grey-1);
+}
+@media screen and (min-width: 800px) {
+  nav {
+    background: transparent;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(2, 132, 245, 0.995);
+
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: var(--clr-white);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    transition: var(--transition);
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0;
+    color: rgba(2, 132, 245, 0.995);
+
+  }
+  .links a:hover {
+    color: var(--clr-white);
+  }
+}
+/* hero */
+header {
+  min-height: 100vh;
+
+}
+.banner {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.container h1 {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.container p {
+  color: var(--clr-white);
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+@media screen and (min-width: 768px) {
+  .container p {
+    max-width: 40rem;
+  }
+}
+/* sections and title */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.title span {
+    color: rgba(2, 132, 245, 0.995);
+
+}
+#about,
+#services,
+#tours {
+  height: 80vh;
+}
+#services {
+  background: var(--clr-white);
+}
+footer {
+  background: var(--clr-grey-1);
+  padding: 5rem 1rem;
+}
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 0;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--clr-secondary);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+  color: rgba(2, 132, 245, 0.995);
+
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.aboutus{
+    color: rgba(2, 132, 245, 0.995);
+    font-size: 2rem;
+
+
+}
+
+</style> 
+ </head>
+  <body>
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="./logo.svg" class="logo" alt="logo" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">services</a>
+              </li>
+              <li>
+                <a href="#tours" class="scroll-link">tours</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>EXPLORE POSSIBILITIES</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos
+            neque sunt in? Id, necessitatibus quos quisquam distinctio
+            laudantium fugiat?
+          </p>
+          <a href="#tours" class="scroll-link btn btn-white">explore tours</a>
+        </div>
+      </div>
+    </header>
+    <!-- about -->
+    <section id="about" class="section">
+      <div class="aboutus">
+        <h2>About Us</h2>
+      </div>
+    </section>
+    <!-- services -->
+    <section id="services" class="section">
+      <div class="title">
+        <h2>our <span>services</span></h2>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>explore <span>tours</span></h2>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="section">
+      <p>
+        copyright &copy; shubham and company
+        <span id="date"></span>. all rights reserved
+      </p>
+    </footer>
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
